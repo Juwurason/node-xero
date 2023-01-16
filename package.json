@@ -1,7 +1,7 @@
 {
-  "name": "xero-node-oauth2-ts-starter",
+  "name": "xero-node",
   "version": "1.0.0",
-  "description": "a starter project using node, express, typescript, xero-node, and oauth 2.0",
+  "description": "",
   "main": "build/app.js",
   "scripts": {
     "tsc": "tsc",
