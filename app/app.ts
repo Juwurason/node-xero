@@ -1,7 +1,10 @@
 require('dotenv').config();
-import express from 'express';
-import { Request, Response } from 'express';
-import jwtDecode from 'jwt-decode';
+// import express from 'express';
+const express = require("express");
+import { Request, Response } from "express";
+// const { Request, Response } = require('express')
+// import jwtDecode from 'jwt-decode';
+const jwtDecode = require("jwt-decode");
 import { TokenSet } from 'openid-client';
 import { XeroAccessToken, XeroIdToken, XeroClient, Contact, LineItem, Invoice, Invoices, Phone, Contacts } from 'xero-node';
 
@@ -23,7 +26,8 @@ if (!client_id || !client_secret || !redirectUrl) {
 	throw Error('Environment Variables not all set - please check your .env file in the project root or create one!')
 }
 
-const app: express.Application = express();
+// const app: express.Application = express();
+const app = express()
 
 app.use(express.static(__dirname + '/build'));
 
